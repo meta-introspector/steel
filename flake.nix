@@ -2,18 +2,18 @@
   description = "Embedded scheme interpreter in Rust";
 
   inputs = {
-    flake-compat.url = "github:edolstra/flake-compat";
+    flake-compat.url = "github:meta-introspector/flake-compat?ref=feature/CRQ-016-nixify";
 
     flake-parts = {
-      url = "github:hercules-ci/flake-parts";
+      url = "github:meta-introspector/flake-parts?ref=feature/CRQ-016-nixify";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    systems.url = "github:nix-systems/default";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
+    systems.url = "github:meta-introspector/default?ref=feature/CRQ-016-nixify";
 
     treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
+      url = "github:meta-introspector/treefmt-nix?ref=feature/CRQ-016-nixify";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
